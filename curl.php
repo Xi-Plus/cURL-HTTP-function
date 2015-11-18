@@ -11,9 +11,9 @@ function cURL_HTTP_Request($url,$post=null,$header=false,$cookie=false){
 	}
 	if($cookie){
 		curl_setopt($ch,CURLOPT_COOKIE,$cookie);
+		curl_setopt($ch,CURLOPT_COOKIEFILE,"cookie.txt");
+		curl_setopt($ch,CURLOPT_COOKIEJAR,"cookie.txt");
 	}
-	curl_setopt($ch,CURLOPT_COOKIEFILE,"cookie.txt");
-	curl_setopt($ch,CURLOPT_COOKIEJAR,"cookie.txt");
 	
 	curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
 	curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,0);
