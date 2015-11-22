@@ -10,9 +10,8 @@ function cURL_HTTP_Request($url,$post=null,$header=false,$cookie=false){
 		curl_setopt($ch,CURLOPT_HTTPHEADER,$header);
 	}
 	if($cookie){
-		curl_setopt($ch,CURLOPT_COOKIE,$cookie);
-		curl_setopt($ch,CURLOPT_COOKIEFILE,"cookie.txt");
-		curl_setopt($ch,CURLOPT_COOKIEJAR,"cookie.txt");
+		curl_setopt($ch,CURLOPT_COOKIEFILE,$cookie);
+		curl_setopt($ch,CURLOPT_COOKIEJAR,$cookie);
 	}
 	
 	curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
